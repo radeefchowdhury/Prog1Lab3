@@ -3,6 +3,7 @@ import java.util.*;
 public class Celsius {
    public static void main(String[] args) {
        
+      //This displays two difference messages depending on the temperature
        String output;
        Scanner sc = new Scanner(System.in);
        System.out.println("Enter the current temeperature");
