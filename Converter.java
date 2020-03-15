@@ -1,7 +1,8 @@
 import java.util.*;
 
-public class Money {
+public class Converter {
 
+    //This displays all the options 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Choose one of the following: ");
@@ -11,8 +12,10 @@ public class Money {
         System.out.println("Pounds to Kilogram conversion ");
         System.out.println("USD to EURO conversion ");
         
+        //This gets what the user types in
          String conversionChosen = sc.nextLine();
          
+        //This uses switches to see what conversion the person chose, and choosing accordingly
          switch(conversionChosen){
              case ("Meters to feet conversion"):
                  System.out.println("Enter amount of meters");
