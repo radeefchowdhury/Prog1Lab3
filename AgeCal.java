@@ -3,14 +3,14 @@ import java.time.Period;
 import java.util.Scanner;
 
 public class AgeCal {
-
+//This prompts the user for the info, to give his age and tell him when his birthday is
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         LocalDate bday;
         LocalDate today = LocalDate.now();
 
-
+//Asks the user for birthday
         System.out.println("Enter your birthday year");
         int year = sc.nextInt();
         System.out.println("Enter your birthday month");
@@ -19,14 +19,14 @@ public class AgeCal {
         int day = sc.nextInt();
 
         bday = LocalDate.of(year, month, day);
-
+//This is the period between the birthday and todays date
         Period p = Period.between(bday, today);
 
         System.out.println(" ");
         System.out.println("You're " + p.getYears() + " years old"); 
 
         System.out.println(" ");
-
+//This is to either say if his birthday is coming up or it past, depending on the bday and today
         if(bday.getDayOfYear()>= today.getDayOfYear()){
             int diff = ((bday.getDayOfYear()-today.getDayOfYear())+1);
             System.out.println(diff + " days until your birthday");
